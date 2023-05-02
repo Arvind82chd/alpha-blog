@@ -1,18 +1,30 @@
-<%= render 'errors' %>
-<%= form_with(model: @article, local: true) do |f| %>
+<div class="container">
+    <%= render 'errors' %>
+    <%= form_with(model: @article, local: true) do |f| %>
+    <div id="form"  class="text-center shadow p-3 mb-3 rounded" >
+        <div class="form-group row">
+            <p class="col-2 col-form-lable">
+                <%= f.label :title %></br>
+                <div class="col-10">
+                    <%= f.text_field :title, class: "form-control shadow rounded", placeholder: "Article Title" %>
+                </div>
+            </p>
+        </div>
+        <div class="form-group row">
+            <p class="col-2 col-form-lable">
+                <%= f.label :description %></br>
+                <div class="col-10">
+                    <%= f.text_area :description, class: "form-control shadow rounded", placeholder: 'Article description' %>
+                </div>
+            </p>
+        </div>
 
-    <p>
-        <%= f.label :title %></br>
-        <%= f.text_field :title %>
-    </p>
+            <p>
+            <%= f.submit "Submit", class: "btn btn-outline-success"%>
+            </p>
 
-    <p>
-        <%= f.label :description %></br>
-        <%= f.text_area :description %>
-    </p>
+    </div>
+    <% end %>
+    <p><%= link_to '[ Cancel and return to articles list ]', articles_path, class: "text-warning" %></p>
 
-    <p>
-       <%= f.submit %>
-    </p>
-
-<% end %>
+</div>

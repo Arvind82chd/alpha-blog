@@ -13,6 +13,7 @@ body {
 
 #italic {
     font-style: italic;
+    background-color: #1C8F0B;
 }
 
 .jumbotron {
@@ -22,13 +23,33 @@ body {
     background-size: cover;
 }
 
+// html {
+//     position: relative;
+// }
 
 footer {
     position: fixed;
+    //position: absolute;
     overflow: hidden;
     bottom: 0;
     width: 100%;
     text-align: center;
     margin-top: 35px;
     background-color: #fcba03;
+}
+
+.card-body {
+    background-color: #FDEE9E;
+}
+
+.card, .card-footer {
+    background-color: #1C8F0B;
+}
+
+#form {
+    background-color: #FDEE9E;
+}
+
+#errors {
+    background-color: #FB7DBA;
 }
