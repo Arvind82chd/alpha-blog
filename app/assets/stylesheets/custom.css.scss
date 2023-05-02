@@ -11,6 +11,10 @@ body {
     color: beige;
 }
 
+#italic {
+    font-style: italic;
+}
+
 .jumbotron {
     background-image: asset-url('test-image.jpg');
     background-position: center center;

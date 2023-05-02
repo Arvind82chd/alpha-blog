@@ -7,3 +7,19 @@
     <%= link_to 'Delete', article_path(@article), method: :delete, data: { confirm: "Are you sure?" } %> |
     <%= link_to 'Back to All articles', articles_path %> 
 </p>
+
+<div class="card text-center">
+  <div class="card-header">
+    <h1>Title: <%= @article.title %></h1>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Description:</h5>
+    <p class="card-text"><%= @article.description %></p>
+    <a class="btn btn-success" <%= link_to 'Edit', edit_article_path(@article) %></a> |
+    <a class="btn btn-success" <%= link_to 'Delete', article_path(@article), method: :delete, data: { confirm: "Are you sure?" } %></a> |
+    <a class="btn btn-success" <%= link_to 'Back to All articles', articles_path %></a>
+  </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>
