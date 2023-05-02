@@ -11,10 +11,6 @@ body {
     color: beige;
 }
 
-// #footer {
-    
-// }
-
 .jumbotron {
     background-image: asset-url('test-image.jpg');
     background-position: center center;
@@ -22,14 +18,13 @@ body {
     background-size: cover;
 }
 
-.card {
-    // display: flexbox;
-    // text-align: end;
-    position: -webkit-sticky;
-    position: sticky;
+
+footer {
+    position: fixed;
+    overflow: hidden;
     bottom: 0;
     width: 100%;
+    text-align: center;
     margin-top: 35px;
     background-color: #fcba03;
-    background-position-y: bottom ;
 }
