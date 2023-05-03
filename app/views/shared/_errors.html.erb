@@ -1,0 +1,16 @@
+<% if @article.errors.any? %>
+
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      <strong class='text-danger'>The following errors prevented the article from being saved: </strong> 
+      <ul>
+        <% @article.errors.full_messages.each do |msg| %>
+            <li class='text-danger'><%= msg %></li>
+        <% end %>
+      </ul>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+
+
+<% end %>
