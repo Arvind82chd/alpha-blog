@@ -1,4 +1,4 @@
-<h1 class="text-center mt-4">Listing All Articles:</h1>
+<h1>Listing All Articles:</h1>
 
 <div class="container">
   <% @articles.each do |article| %>
@@ -11,7 +11,8 @@
         <p class="card-text"><%= truncate(article.description, length: 20)  %></p>
         <a class="btn btn-outline-success" <%= link_to 'View', article_path(article) %></a> |
         <a class="btn btn-outline-warning" <%= link_to 'Edit', edit_article_path(article) %></a> |
-        <a class="btn btn-outline-danger" <%= link_to 'Delete', article_path(article), method: :delete, data: { confirm: "Are you sure?" } %></a> 
+        <a><%= link_to "Delete", article_path(article), method: :delete, data: { confirm: "Are you sure you want to delete this Article?" }, class: "btn btn-outline-danger" %></a>
+        
     </div>
     <div class="card-footer text-muted">
         <small>Created <%= time_ago_in_words(article.created_at) %> ago,
@@ -20,12 +21,6 @@
     </div>
   <% end %>
 </div>
-<p>
+<div class="mb-3">
     <%= link_to 'Create new article', new_article_path %>
-</p>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
+</div>

@@ -1,6 +1,18 @@
+html {
+    height: 100%; 
+}
 
 body {
     background-color: beige;
+    height: 100%; 
+}
+
+footer {
+    overflow: hidden; 
+    width: 100%;
+    text-align: center;
+    background-color: #fcba03;
+    height: 50px; 
 }
 
 #home-container {
@@ -9,6 +21,10 @@ body {
     border-radius: 5px;
     text-align: center;
     color: beige;
+}
+
+#form {
+    background-color: #FDEE9E;
 }
 
 #italic {
@@ -23,21 +39,6 @@ body {
     background-size: cover;
 }
 
-// html {
-//     position: relative;
-// }
-
-footer {
-    position: fixed;
-    //position: absolute;
-    overflow: hidden;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    margin-top: 35px;
-    background-color: #fcba03;
-}
-
 .card-body {
     background-color: #FDEE9E;
 }
@@ -46,7 +47,8 @@ footer {
     background-color: #1C8F0B;
 }
 
-#form {
-    background-color: #FDEE9E;
-}
+.content {
+    min-height: calc(100vh - 50px);
+  }
+  
 
