@@ -29,7 +29,7 @@
         </div>
 
             <p>
-            <%= f.submit "Sign up", class: "btn btn-outline-success"%>
+            <%= f.submit(@user.new_record? ? "Sign up" : "Update Account", class: "btn btn-outline-success") %>
             </p>
 
     </div>
