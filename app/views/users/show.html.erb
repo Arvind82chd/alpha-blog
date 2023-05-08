@@ -2,5 +2,9 @@
 
 <%= gravatar_for @user, size: 400 %>
 
+<div class="text-centyer mt-4">
+  <%= link_to "Edit your profile", edit_user_path(@user), class: 'btn btn-outline-warning' %>
+</div>
+
 <%= render 'articles/article' %>
 
