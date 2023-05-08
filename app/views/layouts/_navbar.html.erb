@@ -34,6 +34,8 @@
               <li><hr class="dropdown-divider"></li>
             <% end %>
               <li><a class="dropdown-item" <%= link_to 'Edit your profile', edit_user_path(current_user) %></a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item text-danger" <%= link_to "Delete your profile", user_path(current_user), method: :delete, data: { confirm: "Are you sure?" } %></a></li>
           </ul>
         </li>
           <li class="nav-item">
