@@ -9,5 +9,12 @@ class ApplicationController < ActionController::Base
     def logged_in?
       !!current_user
     end
+
+    def require_user # to stop access from browser path
+      if !logged_in?
+        flash[:alert] = "You must be logged in for this Action."
+        redirect_to login_path
+      end
+    end
       
 end
