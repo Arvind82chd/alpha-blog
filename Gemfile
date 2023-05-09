@@ -47,6 +47,9 @@ gem "sassc-rails"
 
 gem 'will_paginate', '~> 3.1'
 
+# for testing if it doen't work on its own
+#gem 'rexml', require: false
+
 # gem 'jquery-rails'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
