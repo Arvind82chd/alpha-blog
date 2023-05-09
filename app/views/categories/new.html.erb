@@ -1,0 +1,23 @@
+<h1 >Create a new category</h1>
+<div class="container">
+    <%= render 'shared/errors', obj: @category %>
+    <%= form_with(model: @category, local: true) do |f| %>
+    <div id="form"  class="text-center shadow p-3 mb-3 rounded" >
+        <div class="form-group row">
+            <p class="col-2 col-form-lable">
+                <%= f.label :name %></br>
+                <div class="col-10">
+                    <%= f.text_field :name, class: "form-control shadow rounded", placeholder: "Enter a Name" %>
+                </div>
+            </p>
+        </div>
+
+            <p>
+            <%= f.submit 'Create Category', class: "btn btn-outline-success" %>
+            </p>
+
+    </div>
+    <% end %>
+    <p><%= link_to '[ Cancel and return to articles list ]', articles_path, class: "text-warning" %></p>
+
+</div>
