@@ -19,9 +19,19 @@
             </p>
         </div>
 
-            <p>
-            <%= f.submit "Submit", class: "btn btn-outline-success"%>
+        <div class="form-group row">
+            <p class="col-2 col-form-lable">
+                <%= f.label :category %></br>
+                <div class="col-10">
+                  <%= f.collection_select :category_ids, Category.all, :id, :name, 
+                  { prompt: "Make your selection from the list below: (can be empty)" }, { multiple: true, size: 3, class: "custom-select-lg shadow rounded" } %>
+                </div>
             </p>
+        </div>
+
+        <p>
+          <%= f.submit "Submit", class: "btn btn-outline-success"%>
+        </p>
 
     </div>
     <% end %>
